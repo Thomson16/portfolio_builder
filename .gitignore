@@ -1,0 +1,5 @@
+node_modules/
+uploads/
+sessions.db
+users.db
+.env

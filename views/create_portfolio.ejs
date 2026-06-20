@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Portfolio</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+<div class="portfolio-form">
+
+    <h1>Create Your Portfolio</h1>
+
+    <form
+        action="/create_portfolio"
+        method="POST"
+        enctype="multipart/form-data">
+
+        <input
+            type="text"
+            name="full_name"
+            placeholder="Full Name"
+            required>
+
+        <input
+            type="text"
+            name="title"
+            placeholder="Portfolio Title"
+            required>
+
+        <textarea
+            name="about"
+            placeholder="About Me"></textarea>
+
+        <textarea
+            name="skills"
+            placeholder="Skills (HTML, CSS, JavaScript, Node.js)"></textarea>
+
+        <textarea
+            name="education"
+            placeholder="Education Details"></textarea>
+
+        <textarea
+            name="experience"
+            placeholder="Experience Details"></textarea>
+
+        <textarea
+            name="projects"
+            placeholder="Project Details"></textarea>
+
+        <input
+            type="text"
+            name="github"
+            placeholder="GitHub Link">
+
+        <input
+            type="text"
+            name="linkedin"
+            placeholder="LinkedIn Link">
+
+        <!-- Profile Photo -->
+
+        <label><b>Profile Photo</b></label>
+
+        <input
+            type="file"
+            name="photo">
+
+        <button type="submit">
+            Save Portfolio
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

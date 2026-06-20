@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+<h1>Portfolio Gallery</h1>
+
+<% if(portfolios && portfolios.length > 0){ %>
+
+    <% portfolios.forEach(portfolio => { %>
+
+        <div class="card">
+            <h2><%= portfolio.full_name %></h2>
+            <h3><%= portfolio.title %></h3>
+            <p><%= portfolio.about %></p>
+            <p><b>Skills:</b> <%= portfolio.skills %></p>
+        </div>
+
+    <% }) %>
+
+<% } else { %>
+
+    <h2>No portfolios available</h2>
+
+<% } %>
+
+</body>
+</html>

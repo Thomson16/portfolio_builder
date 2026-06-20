@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio Preview</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+<div class="preview-container">
+
+    <% if(portfolio){ %>
+
+        <% if(portfolio.photo){ %>
+            <img src="/uploads/<%= portfolio.photo %>" class="profile-img">
+        <% } %>
+
+        <h1><%= portfolio.full_name %></h1>
+        <h2><%= portfolio.title %></h2>
+
+        <div class="preview-card">
+            <h3>About Me</h3>
+            <p><%= portfolio.about %></p>
+        </div>
+
+        <div class="preview-card">
+            <h3>Skills</h3>
+            <p><%= portfolio.skills %></p>
+        </div>
+
+        <div class="preview-card">
+            <h3>Education</h3>
+            <p><%= portfolio.education %></p>
+        </div>
+
+        <div class="preview-card">
+            <h3>Experience</h3>
+            <p><%= portfolio.experience %></p>
+        </div>
+
+        <div class="preview-card">
+            <h3>Projects</h3>
+            <p><%= portfolio.projects %></p>
+        </div>
+
+        <div class="preview-card">
+            <h3>Links</h3>
+
+            <a href="<%= portfolio.github %>" target="_blank">
+                GitHub
+            </a>
+
+            <br><br>
+
+            <a href="<%= portfolio.linkedin %>" target="_blank">
+                LinkedIn
+            </a>
+        </div>
+
+    <% } else { %>
+
+        <h2>No Portfolio Found</h2>
+
+    <% } %>
+
+</div>
+
+</body>
+</html>

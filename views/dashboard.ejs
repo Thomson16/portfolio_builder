@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Portfolio Builder</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Portfolio Builder</h2>
+
+        <a href="/dashboard">Dashboard</a>
+        <a href="/create_portfolio">Create Portfolio</a>
+        <a href="/preview">Preview</a>
+        <a href="/gallery">Gallery</a>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dashboard-content">
+
+        <h1>Welcome, <%= user.name %></h1>
+        <p class="welcome-text">Login Successful!</p>
+
+        <div class="dash-cards">
+
+            <!-- Create Portfolio Card -->
+            <div class="dash-card">
+                <h3>Create Portfolio</h3>
+                <p>
+                    Add your skills, projects, education,
+                    experience and social links.
+                </p>
+
+                <a href="/create_portfolio" class="dash-btn">
+                    Create Now
+                </a>
+            </div>
+
+            <!-- Preview Card -->
+            <div class="dash-card">
+                <h3>Portfolio Preview</h3>
+                <p>
+                    View your latest portfolio and check
+                    how it appears to visitors.
+                </p>
+
+                <a href="/preview" class="dash-btn">
+                    Preview
+                </a>
+            </div>
+
+            <!-- Gallery Card -->
+            <div class="dash-card">
+                <h3>Public Gallery</h3>
+                <p>
+                    Explore portfolios created by other
+                    users and get inspiration.
+                </p>
+
+                <a href="/gallery" class="dash-btn">
+                    Open Gallery
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
